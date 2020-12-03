@@ -23,6 +23,8 @@ def valid(s):
     valid_index_b = readNum(s)[1]
     indexes = [i for i, char in enumerate(password) if char == letter] # find each occurence of the letter in the password
     valid_indexes = [n for n in indexes if n + 1 == valid_index_a or n + 1 == valid_index_b] # find each occurrence of a valid index
+    
+    # No need to do complex xor syntax if we have a list of valid indexes :3
     if len(valid_indexes) == 1:
         return True
     else:
